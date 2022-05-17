@@ -1,5 +1,6 @@
 import {ApolloServer, gql} from 'apollo-server';
 
+// USER TABLE
 const users = [
     {
         id: 1,
