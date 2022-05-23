@@ -1,6 +1,6 @@
 import {ApolloServer, gql} from 'apollo-server';
 
-// USER TABLE
+// USER SLQ TABLE or NoSQL COLLECTION 
 const users = [
     {
         id: 1,
@@ -20,13 +20,20 @@ const users = [
 
 const typeDefs = gql`
     type Query {
-        greet: String
+        users: [User]
+    }
+
+    type User {
+        id: ID
+        firstName: String
+        lastName: String
+        email: String
     }
 `
 
 const resolvers = {
     Query: {
-        greet: () => 'Hello, World'
+        users: () => users
     }
 }
 
