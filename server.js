@@ -31,6 +31,7 @@ const typeDefs = gql`
     }
 `
 
+
 const resolvers = {
     Query: {
         users: () => users
